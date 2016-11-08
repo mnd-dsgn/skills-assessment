@@ -5,7 +5,7 @@ $secondary-text: #393939;
 $primary-row: #212121;
 $secondary-row: #1a1a1a;
 $highlight-color: #484848;
-$link-color: #2fa8ad;
+$link-highlight-color: #2fa8ad;
 $success: #00ff23;
 $warning: #c5c213;
 $danger: #fc0000;
@@ -65,15 +65,15 @@ $widget-width: 400px;
     tr:hover {
       background-color: $highlight-color;
       td {
-        color: white;
-      }
-      td {
         border: none;
       }
     }
     &, th, td {
       border: 1px solid black;
       border-collapse: collapse;
+    }
+    td.highlighted {
+      color: $link-highlight-color;
     }
     div.orb {
       border-radius: 100%;
@@ -85,6 +85,8 @@ $widget-width: 400px;
       .success {
         background-color: $success;
       }
+    }
+    div {
       .warning {
         background-color: $warning;
       }

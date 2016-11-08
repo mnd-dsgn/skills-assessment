@@ -39,12 +39,12 @@
     #contacts-widget table tr:hover {
       background-color: #484848; }
       #contacts-widget table tr:hover td {
-        color: white; }
-      #contacts-widget table tr:hover td {
         border: none; }
     #contacts-widget table, #contacts-widget table th, #contacts-widget table td {
       border: 1px solid black;
       border-collapse: collapse; }
+    #contacts-widget table td.highlighted {
+      color: #2fa8ad; }
     #contacts-widget table div.orb {
       border-radius: 100%;
       background-color: #00ff23;
@@ -54,10 +54,10 @@
       margin: 0 10px; }
       #contacts-widget table div.orb .success {
         background-color: #00ff23; }
-      #contacts-widget table div.orb .warning {
-        background-color: #c5c213; }
-      #contacts-widget table div.orb .danger {
-        background-color: #fc0000; }
+    #contacts-widget table div .warning {
+      background-color: #c5c213; }
+    #contacts-widget table div .danger {
+      background-color: #fc0000; }
   #contacts-widget footer {
     height: 66px;
     border-top: 4px solid black;

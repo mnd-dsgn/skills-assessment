@@ -55,10 +55,12 @@ CONTACTS_WIDGET.addMouseoverListeners = function() {
   var _tdMousoverCallback = function() {
     var _infoDiv = "<div class='info-div' style='position: absolute; float:right;'> <p>555.555.555 <br> 6539 Wilton Ave.<br> Culver City CA 90234 </p> </div>";
     this.insertAdjacentHTML('afterend', _infoDiv);
+    _addClass(this.children[1], "highlighted");
   }
   var _tdMouseleaveCallback = function() {
     var _infoDiv = document.querySelector('.info-div');
     _infoDiv.parentNode.removeChild(_infoDiv);
+    this.children[1].classList.remove("highlighted");
   }
   for (var i = 0; i < _tableRows.length; i++) {
     _tableRows[i].addEventListener("mouseenter", _tdMousoverCallback)
