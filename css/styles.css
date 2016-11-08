@@ -36,6 +36,8 @@
       background-color: #212121; }
     #contacts-widget table tr.odd-row {
       background-color: #1a1a1a; }
+    #contacts-widget table tr:hover {
+      background-color: #484848; }
     #contacts-widget table, #contacts-widget table th, #contacts-widget table td {
       border: 1px solid black;
       border-collapse: collapse; }
@@ -46,6 +48,12 @@
       height: 10px;
       width: 10px;
       margin: 0 10px; }
+      #contacts-widget table div.orb .success {
+        background-color: #00ff23; }
+      #contacts-widget table div.orb .warning {
+        background-color: #c5c213; }
+      #contacts-widget table div.orb .danger {
+        background-color: #fc0000; }
   #contacts-widget footer {
     height: 66px;
     border-top: 4px solid black;
@@ -55,5 +63,9 @@
       color: black;
       float: right;
       margin: 20px; }
+  #contacts-widget div.info-div {
+    background-color: #484848;
+    width: 400px;
+    height: 40px; }
 
 /*# sourceMappingURL=styles.css.map */
