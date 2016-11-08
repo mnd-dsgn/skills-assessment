@@ -38,6 +38,8 @@
       background-color: #1a1a1a; }
     #contacts-widget table tr:hover {
       background-color: #484848; }
+      #contacts-widget table tr:hover td {
+        color: white; }
     #contacts-widget table, #contacts-widget table th, #contacts-widget table td {
       border: 1px solid black;
       border-collapse: collapse; }
@@ -66,6 +68,9 @@
   #contacts-widget div.info-div {
     background-color: #484848;
     width: 400px;
-    height: 40px; }
+    height: 80px; }
+    #contacts-widget div.info-div p {
+      float: right;
+      margin-right: 20px; }
 
 /*# sourceMappingURL=styles.css.map */

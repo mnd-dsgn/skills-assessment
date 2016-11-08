@@ -50,16 +50,16 @@ CONTACTS_WIDGET.switchInfoType = function() {
   }
 }
 
-var _tdMousoverCallback = function() {
-  var _infoDiv = "<div class='info-div' style='position: absolute; float:right;'> <p>Some text</p> </div>";
-  this.insertAdjacentHTML('afterend', _infoDiv);
-}
-var _tdMouseleaveCallback = function() {
-  var _infoDiv = document.querySelector('.info-div');
-  _infoDiv.parentNode.removeChild(_infoDiv);
-}
 
 CONTACTS_WIDGET.addMouseoverListeners = function() {
+  var _tdMousoverCallback = function() {
+    var _infoDiv = "<div class='info-div' style='position: absolute; float:right;'> <p>555.555.555 <br> 6539 Wilton Ave.<br> Culver City CA 90234 </p> </div>";
+    this.insertAdjacentHTML('afterend', _infoDiv);
+  }
+  var _tdMouseleaveCallback = function() {
+    var _infoDiv = document.querySelector('.info-div');
+    _infoDiv.parentNode.removeChild(_infoDiv);
+  }
   for (var i = 0; i < _tableRows.length; i++) {
     _tableRows[i].addEventListener("mouseenter", _tdMousoverCallback)
     _tableRows[i].addEventListener("mouseleave", _tdMouseleaveCallback)
