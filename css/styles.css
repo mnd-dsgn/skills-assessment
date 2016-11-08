@@ -40,6 +40,8 @@
       background-color: #484848; }
       #contacts-widget table tr:hover td {
         color: white; }
+      #contacts-widget table tr:hover td {
+        border: none; }
     #contacts-widget table, #contacts-widget table th, #contacts-widget table td {
       border: 1px solid black;
       border-collapse: collapse; }
