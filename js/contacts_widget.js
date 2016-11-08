@@ -5,13 +5,13 @@ var widgetTable = widget.querySelector('table');
 var _tableRows = widgetTable.querySelector('tbody').children;
 
 var _addClass = function(el, className) {
-    if (el.classList) {
-      el.classList.add(className);
-    }
-    else {
-      el.className += ' ' + className;
-    }
+  if (el.classList) {
+    el.classList.add(className);
   }
+  else {
+    el.className += ' ' + className;
+  }
+}
 
 CONTACTS_WIDGET.colorTableRows = function() {
 
@@ -27,7 +27,7 @@ CONTACTS_WIDGET.colorTableRows = function() {
 CONTACTS_WIDGET.addOrbs = function() {
   // for (var i = 0; i < _tableRows.length; i++) {
   //   // get first TD
-  //   // insert div with a class of "orb green/yellow/red" into innerHTML before text
+  //   // insert div with a class of "orb success/warning/danger" into innerHTML before text
   // }
 }
 
@@ -47,6 +47,24 @@ CONTACTS_WIDGET.switchInfoType = function() {
     _populateEmailAddresses();
   } else if (selector.value === "Phone number") {
     _populatePhoneNumbers();
+  }
+}
+
+var _tdMousoverCallback = function() {
+  console.log(this);
+  var _infoDiv = "<div class='info-div'>Some info</div>";
+  this.insertAdjacentHTML('afterend', _infoDiv);
+}
+var _tdMouseleaveCallback = function() {
+  var infoDiv = document.querySelectorAll('.info-div')[0];
+  console.log(infoDiv)
+  infoDiv.parentNode.removeChild(infoDiv);
+}
+
+CONTACTS_WIDGET.addMouseoverListeners = function() {
+  for (var i = 0; i < _tableRows.length; i++) {
+    _tableRows[i].addEventListener("mouseover", _tdMousoverCallback)
+    _tableRows[i].addEventListener("mouseleave", _tdMouseleaveCallback)
   }
 }
 

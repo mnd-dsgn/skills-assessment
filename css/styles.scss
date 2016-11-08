@@ -9,6 +9,7 @@ $success: #00ff23;
 $warning: #c5c213;
 $danger: #fc0000;
 $font-family: Helvetica;
+$widget-width: 400px;
 
 
 * {
@@ -20,7 +21,7 @@ $font-family: Helvetica;
   border-radius: 10px;
   box-shadow: 0 0 18px #adadad;
   /*height: 500px;*/
-  width: 400px;
+  width: $widget-width;
   margin: 60px auto;
 
   header {
@@ -52,11 +53,13 @@ $font-family: Helvetica;
         color: $secondary-text;
       }
     }
-    tr.even-row {
-      background-color: $primary-row;
-    } 
-    tr.odd-row {
-      background-color: $secondary-row;
+    tr {
+      &.even-row {
+        background-color: $primary-row;
+      } 
+      &.odd-row {
+        background-color: $secondary-row;
+      }
     }
     &, th, td {
       border: 1px solid black;
@@ -69,6 +72,15 @@ $font-family: Helvetica;
       height: 10px;
       width: 10px;
       margin: 0 10px;
+      .success {
+        background-color: $success;
+      }
+      .warning {
+        background-color: $warning;
+      }
+      .danger {
+        background-color: $danger;
+      }
     }
   }
   footer {
@@ -82,4 +94,13 @@ $font-family: Helvetica;
       margin: 20px;
     }
   }
+  
 }
+
+
+div.info-div {
+    position: absolute;
+    width: $widget-width;
+    height: 20px;
+    display: block;
+  }
