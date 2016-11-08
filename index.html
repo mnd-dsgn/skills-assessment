@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  <title>Test</title>
+</head>
+<body>
+  <div id="contacts-widget">
+    <header>
+      <p>Contacts</p>
+    </header>
+
+    <table bordercolor="#000">
+      <tbody>
+        <tr>
+          <td><div class="orb"></div> Christian</td>
+          <td>christian@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Rich</td>
+          <td>rich@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Scott</td>
+          <td>scott@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Danny</td>
+          <td>Danny@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Taka</td>
+          <td>taka@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Tim</td>
+          <td>tim@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Patrick</td>
+          <td>patrick@yahoo.com</td>
+        </tr>
+        <tr>
+          <td><div class="orb"></div> Jacques</td>
+          <td>jacques@yahoo.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <select id="selector" onchange="CONTACTS_WIDGET.switchInfoType()">
+        <option>Email address</option>
+        <option>Phone number</option>
+      </select>
+    </footer>
+
+  </div>
+
+  <script src="javascripts/contacts_widget.js"></script>
+  <script src="javascripts/script.js"></script>
+</body>
+</html>
